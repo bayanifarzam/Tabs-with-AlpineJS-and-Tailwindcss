@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raza Bayani">
+    <meta name="website" content="https://www.razabayani.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/style.css">
+</head>
+<body >
+    
+
+
+
+    <div x-data="{tab:'home'}" class="w-96 mx-auto h-screen bg-red-500 ">
+        <div class="border-b-2 flex  w-full text-center">
+            <a href="#" @click.prevent="tab = 'home'" class="p-5 w-full"
+             :class="{'bg-blue-500':tab==='home'}">Home</a>
+            <a href="#" @click.prevent="tab = 'video'" class="p-5 w-full" :class="{'bg-blue-500':tab==='video'}">Videos</a>
+            <a href="#" @click.prevent="tab = 'post'" class="p-5 w-full" :class="{'bg-blue-500':tab==='post'}">Posts</a>
+        </div>
+        <div class="p-5 prose">
+            <div x-show="tab === 'home'" >
+                <h3>Home Tab</h3>
+                <p>
+                    I have a Crash Course for Tailwindcss on my Channel. Learn the basic of Tailwindcss very easily.
+                </p>
+                <iframe class="w-full" src="https://www.youtube.com/embed/videoseries?list=PLF6w5aHa6V36hSB40o6gPHG3YGnud6B_H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </div>
+            <div x-show="tab === 'video'">
+                <h3>Video Tab</h3>
+                <p>
+                    In this video you'll learn about "How to Integrate Tailwindcss with AlpineJS."
+                </p>
+                <iframe class="w-full" src="https://www.youtube.com/embed/0jukD2yldTY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div x-show="tab === 'post'">
+                <h3>Post Tab</h3>
+                <p>
+                    Learn "How to Setup Tailwindcss very easily?" and start building apps quickly.
+                </p>
+                <iframe class="w-full" src="https://www.youtube.com/embed/ueCwDMIIcGE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="public/script.js"></script>
+</body>
+</html>
